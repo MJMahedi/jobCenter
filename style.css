@@ -560,3 +560,223 @@ footer {
         margin-left: 0;
     }
 }
+
+/* Dream Job Section */
+.dream-job-section {
+    padding: 5rem 5%;
+}
+
+.dream-job-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.dream-job-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.dream-job-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.dream-job-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.5s ease;
+}
+
+.dream-job-image img:hover {
+    transform: scale(1.05);
+}
+
+.category-badge {
+    display: inline-block;
+    background-color: #f3f4f6;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.benefits-list {
+    margin-bottom: 2rem;
+}
+
+.benefits-list li {
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+}
+
+.benefits-list li i {
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+}
+
+/* Job Filter Navigation */
+.job-filter-nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 0.5rem;
+}
+
+.filter-btn {
+    padding: 0.75rem 1.5rem;
+    margin: 0 0.5rem;
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    position: relative;
+}
+
+.filter-btn:hover {
+    color: var(--primary-color);
+}
+
+.filter-btn.active {
+    border-bottom: 3px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+/* Job Listings */
+.job-listings-container {
+    margin-top: 2rem;
+}
+
+.job-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0; /* Start with opacity 0 for animation */
+    transform: translateY(30px); /* Start below final position for animation */
+}
+
+.job-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(41, 3, 139, 0.1);
+}
+
+.job-info {
+    display: flex;
+    align-items: center;
+}
+
+.company-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f3f4f6;
+}
+
+.company-logo i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.job-details h3 {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.job-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.job-meta span {
+    display: flex;
+    align-items: center;
+}
+
+.job-meta span i {
+    margin-right: 0.5rem;
+}
+
+.job-actions {
+    text-align: right;
+}
+
+.job-actions .btn {
+    margin-bottom: 0.5rem;
+}
+
+.job-actions p {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.job-actions p i {
+    margin-right: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .dream-job-container {
+        flex-direction: column;
+    }
+    
+    .dream-job-content {
+        order: 2;
+    }
+    
+    .dream-job-image {
+        order: 1;
+        margin-bottom: 2rem;
+    }
+    
+    .job-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .job-info {
+        margin-bottom: 1.5rem;
+        width: 100%;
+    }
+    
+    .job-actions {
+        width: 100%;
+        text-align: left;
+    }
+    
+    .job-filter-nav {
+        flex-wrap: wrap;
+    }
+    
+    .filter-btn {
+        padding: 0.5rem 1rem;
+        margin: 0.25rem;
+        font-size: 0.9rem;
+    }
+}

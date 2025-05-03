@@ -187,3 +187,135 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+// Add after your existing JavaScript code
+
+// Job filter functionality
+document.addEventListener("DOMContentLoaded", function() {
+    // Initialize job listing animations and functionality only if the elements exist
+    if (document.querySelector('.job-filter-nav')) {
+        initJobListings();
+    }
+});
+
+function initJobListings() {
+    const filterBtns = document.querySelectorAll(".filter-btn");
+    const jobItems = document.querySelectorAll(".job-item");
+    
+    // Show all job items initially
+    jobItems.forEach(item => {
+        item.style.display = "flex";
+    });
+    
+    // Filter button click event
+    filterBtns.forEach(btn => {
+        btn.addEventListener("click", function() {
+            // Remove active class from all buttons
+            filterBtns.forEach(btn => btn.classList.remove("active"));
+            
+            // Add active class to clicked button
+            this.classList.add("active");
+            
+            // Get filter value
+            const filterValue = this.getAttribute("data-filter");
+            
+            // Filter job items
+            jobItems.forEach(item => {
+                if (filterValue === "all") {
+                    gsapShowItem(item);
+                } else if (item.getAttribute("data-category") === filterValue) {
+                    gsapShowItem(item);
+                } else {
+                    gsapHideItem(item);
+                }
+            });
+        });
+    });
+    
+    // Job item hover effect
+    jobItems.forEach(item => {
+        item.addEventListener("mouseenter", function() {
+            this.style.transform = "translateY(-5px)";
+            this.style.boxShadow = "0 10px 20px rgba(41, 3, 139, 0.1)";
+        });
+        
+        item.addEventListener("mouseleave", function() {
+            this.style.transform = "translateY(0)";
+            this.style.boxShadow = "var(--shadow)";
+        });
+    });
+    
+    // Animate job items on scroll
+    animateJobItems();
+}
+
+function gsapShowItem(item) {
+    gsap.to(item, {
+        display: "flex",
+        opacity: 1,
+        y: 0,
+        duration: 0.4,
+        ease: "power3.out"
+    });
+}
+
+function gsapHideItem(item) {
+    gsap.to(item, {
+        opacity: 0,
+        y: 20,
+        duration: 0.3,
+        ease: "power3.out",
+        onComplete: function() {
+            item.style.display = "none";
+        }
+    });
+}
+
+function animateJobItems() {
+    const jobItems = document.querySelectorAll(".job-item");
+    
+    jobItems.forEach((item, index) => {
+        gsap.set(item, {
+            opacity: 0,
+            y: 30
+        });
+        
+        gsap.to(item, {
+            opacity: 1,
+            y: 0,
+            duration: 0.6,
+            delay: index * 0.1,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: item,
+                start: "top 80%",
+                toggleActions: "play none none none"
+            }
+        });
+    });
+    
+    // Animate dream job section
+    const dreamJobSection = document.querySelector(".dream-job-section");
+    if (dreamJobSection) {
+        gsap.from(".dream-job-content", {
+            opacity: 0,
+            x: -50,
+            duration: 0.8,
+            scrollTrigger: {
+                trigger: ".dream-job-section",
+                start: "top 70%",
+                toggleActions: "play none none none"
+            }
+        });
+        
+        gsap.from(".dream-job-image", {
+            opacity: 0,
+            x: 50,
+            duration: 0.8,
+            scrollTrigger: {
+                trigger: ".dream-job-section",
+                start: "top 70%",
+                toggleActions: "play none none none"
+            }
+        });
+    }
+}
