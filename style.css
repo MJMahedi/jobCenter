@@ -11,6 +11,7 @@
     /* --primary-color: #cf42ef; */
     --primary-dark: #02010e;
     --primary-indigo: #4338ca;
+    --primary-pink: #d73fdf;
     --secondary-color: #49eab4;
     --bg-light: #f9f9f9;
     --bg-error: #fe0202;
@@ -23,6 +24,7 @@
     /* --white: #fffefc; */
     --white: #fcf9fccc;
     --shadow:  0 2px 4px -1px rgba(19, 6, 157, 0.938);
+    --whiteshadow:  3px 3px 4px -1px rgba(252, 251, 252, 0.938);
     --box-shadow: 2px 4px 6px -1px rgb(243, 11, 11);
     --transition: all 0.3s ease;
 }
@@ -67,6 +69,7 @@ img {
     background-color: var(--primary-indigo);
     color: var(--white);
     border: 2px solid var(--primary-color);
+    box-shadow: var(--whiteshadow);
 }
 
 .primary-btn:hover {
@@ -79,8 +82,9 @@ img {
 .secondary-btn {
     background-color: transparent;
     color: var(--primary-color);
-    border: 2px solid var(--primary-color);
+    border: 2px solid var(--bg-customBG);
     margin-left: 10px;
+    /* box-shadow: #10b981; */
 }
 
 .secondary-btn:hover {
@@ -92,7 +96,7 @@ img {
 
 /* Header and Navigation */
 header {
-    background-color: var(--bg-customBG);
+    background-color: var(--primary-pink);
     box-shadow: 2px 2px 10px rgb(255, 254, 254);
     position: fixed;
     width: 100%;
@@ -156,9 +160,9 @@ header {
 .hero-section {
     padding: 9rem 5% 5rem;
     /* background-color: var(--bg-customBG); */
-    /* background-color: #242320d9; */
+    background-color: #d269f1d9;
      /* background-color:linear-gradient(to bottom, --bg-customBG, yellow, green); */
-    background-image: linear-gradient(to bottom, var(--bg-customBG), rgb(226, 190, 11), var(--bg-customBG));
+    /* background-image: linear-gradient(to bottom, var(--bg-customBG), rgb(226, 190, 11), var(--bg-customBG)); */
 }
 
 .hero-content {
@@ -218,8 +222,8 @@ header {
 .job-listings {
     padding: 1rem 5%;
     /* margin-top: 2rem; */
-    /* background-color: var(--bg-light); */
-    background-image: linear-gradient(to bottom, var(--bg-customBG) ,rgba(255, 255, 0, 0.463),  rgba(77, 238, 37, 0.675));
+    background-color: var(--bg-light);
+    /* background-image: linear-gradient(to bottom, var(--bg-customBG) ,rgba(255, 255, 0, 0.463),  rgba(212, 44, 242, 0.675)); */
 }
 
 .section-header {
@@ -331,8 +335,8 @@ header {
 /* Stats Section */
 .stats-section {
     padding: 5rem 5%;
-    background-color: var(--primary-color);
-    color: var(--white);
+    background-color: var(--primary-pink);
+    color: var(--text-dark);
 }
 
 .stats-container {
@@ -359,7 +363,8 @@ header {
 
 .stat-item p {
     font-size: 1.1rem;
-    opacity: 0.9;
+    opacity: 1;
+    font-weight: 700;
 }
 
 /* CTA Section */
