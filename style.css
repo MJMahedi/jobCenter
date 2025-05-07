@@ -804,14 +804,16 @@ footer {
 }
 
 .job-actions .btn {
-    /* border: 2px solid #fa05f6; */
+    border: 2px solid #ffffff;
     margin-bottom: 0.5rem;
     color: rgb(255, 255, 255);
-    background-color: #043c9e;
+    /* background-color: #043c9e; */
+    background-color: #95a8c9;
     box-shadow: var(--box-pinkshadow);
 }
 .job-actions .btn:hover {
-    background-color: #95a8c9;
+    /* background-color: #95a8c9; */
+    background-color: #000307;
     /* box-shadow: var(--box-shadow); */
 }
 
