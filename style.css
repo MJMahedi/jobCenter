@@ -808,7 +808,8 @@ footer {
     margin-bottom: 0.5rem;
     color: rgb(255, 255, 255);
     /* background-color: #043c9e; */
-    background-color: #95a8c9;
+    /* background-color: #95a8c9; */
+    background-color: #5c6980;
     box-shadow: var(--box-pinkshadow);
 }
 .job-actions .btn:hover {
