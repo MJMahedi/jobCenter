@@ -79,7 +79,7 @@ img {
     background-color: #354b6b;
     color: var(--white);
     /* border: 1px solid rgb(212, 9, 188); */
-    box-shadow: var(--box-pinkshadow);
+    box-shadow:  var(--box-pinkshadow);
 }
 
 .seondprimary-btn:hover {
@@ -740,7 +740,7 @@ footer {
     margin-bottom: 1rem;
     background-color: var(--white);
     border-radius: 10px;
-    box-shadow: var(--shadow);
+    box-shadow: var(--box-pinkshadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     opacity: 0;
     /* Start with opacity 0 for animation */
@@ -750,7 +750,7 @@ footer {
 
 .job-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(41, 3, 139, 0.1);
+    /* box-shadow: var(--box-pinkshadow); */
 }
 
 .job-info {
@@ -804,7 +804,15 @@ footer {
 }
 
 .job-actions .btn {
+    /* border: 2px solid #fa05f6; */
     margin-bottom: 0.5rem;
+    color: rgb(255, 255, 255);
+    background-color: #043c9e;
+    box-shadow: var(--box-pinkshadow);
+}
+.job-actions .btn:hover {
+    background-color: #95a8c9;
+    /* box-shadow: var(--box-shadow); */
 }
 
 .job-actions p {
