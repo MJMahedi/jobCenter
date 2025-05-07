@@ -526,10 +526,11 @@ footer {
 
 .footer-bottom {
     text-align: center;
+    
     /* padding-top: 2rem; */
     /* margin-top: 3rem; */
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    color: #9ca3af;
+    color: #fcfcfc;
 }
 
 /* Media Queries */
