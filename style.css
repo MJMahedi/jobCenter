@@ -224,8 +224,8 @@ header {
     flex: 1;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: var(--box-whiteshadow);
-    transform: translateY(20px);
+    /* box-shadow: var(--box-whiteshadow); */
+    transform: translateY(60px);
     opacity: 0;
 }
 
@@ -239,7 +239,7 @@ header {
 
 .hero-image:hover img {
     transform: scale(1.5, 1.5);
-}
+} 
 
 /* Job Listings Section */
 .job-listings {
@@ -261,7 +261,7 @@ header {
 }
 
 .section-header p {
-    color: var(--text-light);
+    color: var(--text-dark);
     max-width: 600px;
     margin: 0 auto;
     font-size: 1.1rem;
@@ -334,7 +334,7 @@ header {
 }
 
 .job-box p {
-    color: var(--text-light);
+    color: var(--text-dark);
     margin-bottom: 1.5rem;
     flex-grow: 1;
 }
@@ -427,7 +427,7 @@ header {
 /* Footer */
 footer {
     /* background-color: #4b5e78; */
-    background-image: linear-gradient(to top, rgb(7, 30, 200), var(--primary-pink));
+    background-image: linear-gradient(to top,  rgba(130, 132, 154, 0.56), rgba(7, 30, 200, 0.786), var(--primary-pink));
     color: var(--white);
     padding: 2rem 4%;
     border: 8px solid var(--bg-light);
@@ -440,9 +440,15 @@ footer {
     /* margin-bottom: 28px; */
     /* border: 2px solid white; */
 }
-.jobfinder-section h3{
+.jobfinder-section h3 {
     /* text-align: center; */
     font-size: 2rem;
+   
+}
+.jobfinder-section p {
+    /* text-align: center; */
+    
+    color: #000307;
    
 }
 
@@ -531,11 +537,12 @@ footer {
 
 .footer-bottom {
     text-align: center;
-    
+    /* background-color: #000307; */
     /* padding-top: 2rem; */
     /* margin-top: 3rem; */
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    color: #fcfcfc;
+    /* color: #fcfcfc; */
+    font: bold;
 }
 
 /* Media Queries */
@@ -792,7 +799,7 @@ footer {
     flex-wrap: wrap;
     gap: 1rem;
     font-size: 0.9rem;
-    color: var(--text-light);
+    color: var(--text-dark);
 }
 
 .job-meta span {
@@ -814,7 +821,7 @@ footer {
     color: rgb(255, 255, 255);
     /* background-color: #043c9e; */
     /* background-color: #95a8c9; */
-    background-color: #5c6980;
+    background-color: #394455;
     box-shadow: var(--box-pinkshadow);
 }
 .job-actions .btn:hover {
@@ -825,7 +832,7 @@ footer {
 
 .job-actions p {
     font-size: 0.8rem;
-    color: var(--text-light);
+    color: var(--text-dark);
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -942,12 +949,7 @@ p {
   max-height:150px;
 }
 
-.content {
-  position:relative;
-  height:20vh;
-  text-align:center;
-  background-color: white;
-}
+
 
 /* Animation */
 
@@ -982,7 +984,7 @@ p {
 @media (max-width: 768px) {
   .waves {
     height:60px;
-    min-height:50px;
+    min-height:110px;
   }
   .content {
     height:30vh;
